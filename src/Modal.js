@@ -1,9 +1,6 @@
-import React, { Fragment } from "react";
 
 const Modal = (props) => {
   return (
-    <Fragment>
-      <div className="backdrop" onClick={props.onClose}></div>
       <div className="modal">
         <p>정말 삭제하시겠습니까?</p>
         <div>
@@ -13,7 +10,6 @@ const Modal = (props) => {
           <button className="btn" onClick={props.onClick}>확인</button>
         </div>
       </div>
-    </Fragment>
   );
 };
 

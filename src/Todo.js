@@ -1,36 +1,36 @@
 import {useState} from "react";
+import Backdrop from './Backdrop';
 import Modal from './Modal';
 
 const Todo = (props) => {
-	const [showModal, setShowModal] = useState(false);
+
+	const [modalIsOpen, setModalIsOpen] = useState(false);
+
 	const [removeTodo, setRemoveTodo] = useState(false);
 
 
 
 	const removeHandler = () => {
+		setModalIsOpen(true);
 		setRemoveTodo(true);
-		setShowModal(false);
 		console.log('removeHandler');
 		console.log(props.text);
 	};
 
-	const openModalHandler = () => {
-		setShowModal(true)
-	}
-
-	const modalCloseHandler = () => {
-		setShowModal(false);
+	const closeModalHandler = () => {
+		setModalIsOpen(false);
 	}
 
 	return (
 			<div>
-				{showModal && <Modal onClose={modalCloseHandler} onClick={removeHandler}/>}
 				<div className="card">
 					<h2>{props.text}</h2>
 					<div className="actions">
-						<button className="btn" onClick={openModalHandler}>삭제</button>
+						<button className="btn" onClick={removeHandler}>삭제</button>
 					</div>
 				</div>
+				{modalIsOpen && <Backdrop onClose={closeModalHandler} />}
+				{modalIsOpen && <Modal onClose={closeModalHandler} onClick={closeModalHandler}/>}
 			</div>
 	)
 }
