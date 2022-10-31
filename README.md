@@ -1,74 +1,31 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+## 모달 팝업 연습
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```js
 
-## Available Scripts
+일정 목록 출력 및 모달 팝업 삭제 확인
+1. 일정 목록 리스트 출력
+2. 일정 삭제 버튼 클릭 시 모달 팝업
+3. 모달창 밖 클릭 시 모달 팝업창 사라짐
+4. 모달 닫기 버튼 클릭시 모달 팝업창 사라짐
 
-In the project directory, you can run:
+React CSS Html
 
-### `npm start`
+  App.js : Todo component 출력 (일정)
+  Backdrop.js : 속성 onClick 이벤트에 props 로 onClose 실행할 컴포넌트
+  Modal.js : 모달 팝업창 및 모달 안에 취소 및 확인 버튼 기능있는 컴포넌트
+  Todo.js : Todo component 로 일정 아이템 컴포넌트
+  
+Function
+  Todo.js
+    deleteTodoHandler : 삭제 버튼 클릭시 호출되는 함수
+    closeModalHandler : 닫기 버튼 클릭 시 호출되는 함수
+  
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+첫 메인 화면 일정 목록 출력
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![20221031_191717](https://user-images.githubusercontent.com/75942405/198985526-3e0dc0b5-784d-4f9a-885b-7742fb294edf.png)
 
-### `npm test`
+일정 삭제 버튼 클릭 시 팝업될 모달 화면
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# reactTotalFunctionalPJ
->>>>>>> 0a9849c6725c3f88a30f90c4e7fddcecc0d689a9
+![20221031_191724](https://user-images.githubusercontent.com/75942405/198985535-9fcc25ca-1efd-41c3-9418-f3279c8c6527.png)
